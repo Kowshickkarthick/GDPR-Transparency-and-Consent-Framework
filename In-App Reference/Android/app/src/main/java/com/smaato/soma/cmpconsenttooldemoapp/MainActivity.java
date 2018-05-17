@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         adContainerLayout = findViewById(R.id.adContainer);
 
 
-
         gdprButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                adContainerLayout.removeAllViews();
                 showCMP();
             }
         });
@@ -63,26 +63,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        Button load = findViewById(R.id.gdpr_button);
-        gdprInfoTextView = findViewById(R.id.consentStringTV);
-
-        gdprButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CMPStorage.setCmpPresentValue(MainActivity.this, true);
-                CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "http://10.0.2.2:5000/docs/complete.html", null);
-
-                CMPConsentToolActivity.openCmpConsentToolView(cmpSettings, MainActivity.this, new OnCloseCallback() {
-                    @Override
-                    public void onWebViewClosed() {
-                        Toast.makeText(MainActivity.this, "Got consent", Toast.LENGTH_LONG).show();
-
-                        gdprInfoTextView.setText(getGdprInfo());
-                    }
-                });
-            }
-        });
     }
 
     private void loadPrebidAd() {
@@ -160,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showCMP(){
         CMPStorage.setCmpPresentValue(MainActivity.this, true);
-        CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "http://10.0.2.2:5000/docs/complete.html", null);
+        CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "http://mobile.devnxs.net/testgdpr/docs/complete.html", null);
 
         CMPConsentToolActivity.openCmpConsentToolView(cmpSettings, MainActivity.this, new OnCloseCallback() {
             @Override
@@ -176,6 +156,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         gdprInfoTextView.setText(getGdprInfo());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
     }
 
     private String getGdprInfo() {
