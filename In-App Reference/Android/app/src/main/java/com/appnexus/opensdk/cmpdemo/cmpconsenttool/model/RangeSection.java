@@ -1,4 +1,4 @@
-package com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model;
+package com.appnexus.opensdk.cmpdemo.cmpconsenttool.model;
 
 import java.util.ArrayList;
 import java.util.List;

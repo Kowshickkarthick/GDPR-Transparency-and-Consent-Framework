@@ -1,9 +1,10 @@
-package com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.storage;
+package com.appnexus.opensdk.cmpdemo.cmpconsenttool.storage;
 
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model.SubjectToGdpr;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
+
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.model.SubjectToGdpr;
 
 /**
  * Used to retrieve and store the consentData, subjectToGdpr, vendors and purposes in the SharedPreferences

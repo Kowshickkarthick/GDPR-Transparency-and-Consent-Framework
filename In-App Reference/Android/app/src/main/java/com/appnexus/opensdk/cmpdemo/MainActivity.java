@@ -1,4 +1,4 @@
-package com.smaato.soma.cmpconsenttooldemoapp;
+package com.appnexus.opensdk.cmpdemo;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -15,12 +15,12 @@ import com.appnexus.opensdk.AdListener;
 import com.appnexus.opensdk.AdView;
 import com.appnexus.opensdk.BannerAdView;
 import com.appnexus.opensdk.ResultCode;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.CMPConsentToolActivity;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.callbacks.OnCloseCallback;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.model.CMPSettings;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.model.SubjectToGdpr;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.storage.CMPStorage;
 import com.appnexus.opensdk.utils.Clog;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.CMPConsentToolActivity;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.callbacks.OnCloseCallback;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model.CMPSettings;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model.SubjectToGdpr;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.storage.CMPStorage;
 
 public class MainActivity extends AppCompatActivity {
 

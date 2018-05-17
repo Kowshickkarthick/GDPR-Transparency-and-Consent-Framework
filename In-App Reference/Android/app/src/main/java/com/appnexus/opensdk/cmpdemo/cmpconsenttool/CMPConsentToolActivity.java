@@ -1,4 +1,4 @@
-package com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool;
+package com.appnexus.opensdk.cmpdemo.cmpconsenttool;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,11 +15,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.callbacks.OnCloseCallback;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model.CMPSettings;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model.ConsentStringDecoder;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model.SubjectToGdpr;
-import com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.storage.CMPStorage;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.callbacks.OnCloseCallback;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.model.CMPSettings;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.model.ConsentStringDecoder;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.model.SubjectToGdpr;
+import com.appnexus.opensdk.cmpdemo.cmpconsenttool.storage.CMPStorage;
+
 
 public class CMPConsentToolActivity extends AppCompatActivity {
     private static final String CMP_SETTINGS_EXTRA = "cmp_settings";
