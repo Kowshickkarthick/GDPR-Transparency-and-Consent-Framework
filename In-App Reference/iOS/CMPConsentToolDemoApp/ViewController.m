@@ -21,7 +21,7 @@
 
 - (IBAction)showGDPRConsentTool:(id)sender {
     CMPConsentToolViewController *consentToolVC = [[CMPConsentToolViewController alloc] init];
-    consentToolVC.consentToolURL = [NSURL URLWithString: @"https://demofiles.smaato.com/cmp/index.html"];
+    consentToolVC.consentToolURL = [NSURL URLWithString: @"http://192.168.1.190:5000/docs/complete.html"];
     consentToolVC.consentToolAPI.subjectToGDPR = SubjectToGDPR_Yes;
     consentToolVC.consentToolAPI.cmpPresent = YES;
     consentToolVC.delegate = self;

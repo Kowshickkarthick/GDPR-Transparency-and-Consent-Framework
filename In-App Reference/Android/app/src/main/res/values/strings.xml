@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">CmpConsentToolDemoApp</string>
-    <string name="show_gdpr">Show GDPR</string>
+    <string name="show_gdpr">Show GDPR CMP UI</string>
+    <string name="loadAppNexus_banner">Load AppNexus Ad</string>
+    <string name="loadPrebid_banner">Load Prebid Ad</string>
 </resources>

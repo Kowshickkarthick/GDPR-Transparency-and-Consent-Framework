@@ -20,4 +20,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.appnexus.opensdk:appnexus-sdk:[4,5)'
 }
