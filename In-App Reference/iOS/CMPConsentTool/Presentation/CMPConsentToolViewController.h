@@ -12,6 +12,7 @@
 @class CMPConsentToolViewController;
 @protocol CMPConsentToolViewControllerDelegate <NSObject>
 - (void)consentToolViewController:(CMPConsentToolViewController *)consentToolViewController didReceiveConsentString:(NSString*)consentString;
+- (void)consentToolViewController:(CMPConsentToolViewController *)consentToolViewController didReceiveURL:(NSURL *)url;
 @end
 
 @interface CMPConsentToolViewController : UIViewController

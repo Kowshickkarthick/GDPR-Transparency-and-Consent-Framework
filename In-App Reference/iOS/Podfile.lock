@@ -1,0 +1,18 @@
+PODS:
+  - AppNexusSDK (4.7.1):
+    - AppNexusSDK/AppNexusSDK (= 4.7.1)
+  - AppNexusSDK/AppNexusSDK (4.7.1)
+
+DEPENDENCIES:
+  - AppNexusSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AppNexusSDK
+
+SPEC CHECKSUMS:
+  AppNexusSDK: b5fc2fd67bbd5fc1370825b08d24ee421f3c3b5a
+
+PODFILE CHECKSUM: 500eb3f1171b517eccc0a43b283ec04612850ee4
+
+COCOAPODS: 1.5.0

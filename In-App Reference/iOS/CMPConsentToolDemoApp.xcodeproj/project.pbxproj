@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68675DCA9820AF2968241464 /* libPods-CMPConsentToolDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2080CD728AD225DD5E179964 /* libPods-CMPConsentToolDemoApp.a */; };
 		92214CD120921F96009049DD /* CMPConsentParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92214CBF20921F96009049DD /* CMPConsentParser.m */; };
 		92214CD220921F96009049DD /* CMPDataStorageUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 92214CC520921F96009049DD /* CMPDataStorageUserDefaults.m */; };
 		92214CD320921F96009049DD /* CMPConsentToolAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 92214CC920921F96009049DD /* CMPConsentToolAPI.m */; };
@@ -35,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2080CD728AD225DD5E179964 /* libPods-CMPConsentToolDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CMPConsentToolDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F0F8183519B8F4BB19250B /* Pods-CMPConsentToolDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPConsentToolDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMPConsentToolDemoApp/Pods-CMPConsentToolDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		92214CBF20921F96009049DD /* CMPConsentParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPConsentParser.m; sourceTree = "<group>"; };
 		92214CC020921F96009049DD /* CMPConsentConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPConsentConstant.h; sourceTree = "<group>"; };
 		92214CC120921F96009049DD /* CMPConsentParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPConsentParser.h; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		D1B2F07B2075FC4700EB06AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1B2F07D2075FC4700EB06AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B2F07E2075FC4700EB06AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAB2375D117BFEC7A23E0229 /* Pods-CMPConsentToolDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPConsentToolDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CMPConsentToolDemoApp/Pods-CMPConsentToolDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +71,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68675DCA9820AF2968241464 /* libPods-CMPConsentToolDemoApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		525276F9254D9F04C95FC4BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2080CD728AD225DD5E179964 /* libPods-CMPConsentToolDemoApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		805F4570FE662BB8EAE0D06C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAB2375D117BFEC7A23E0229 /* Pods-CMPConsentToolDemoApp.debug.xcconfig */,
+				34F0F8183519B8F4BB19250B /* Pods-CMPConsentToolDemoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		92214CBD20921F96009049DD /* CMPConsentTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +154,8 @@
 			children = (
 				D1B2F06E2075FC4700EB06AE /* CMPConsentToolDemoApp */,
 				D1B2F06D2075FC4700EB06AE /* Products */,
+				805F4570FE662BB8EAE0D06C /* Pods */,
+				525276F9254D9F04C95FC4BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,10 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1B2F0822075FC4700EB06AE /* Build configuration list for PBXNativeTarget "CMPConsentToolDemoApp" */;
 			buildPhases = (
+				63C7D662AB1F20BEBCBB19ED /* [CP] Check Pods Manifest.lock */,
 				D1B2F0682075FC4700EB06AE /* Sources */,
 				D1B2F0692075FC4700EB06AE /* Frameworks */,
 				D1B2F06A2075FC4700EB06AE /* Resources */,
 				D1B2F08B207602B500EB06AE /* Embed Frameworks */,
+				F5E33AED79A3A924405B282D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +252,117 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63C7D662AB1F20BEBCBB19ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CMPConsentToolDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E33AED79A3A924405B282D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CMPConsentToolDemoApp/Pods-CMPConsentToolDemoApp-resources.sh",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/ANInterstitialAdViewController.xib",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/anjam.js",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/ANMRAID.bundle/mraid.js",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/ASTMediationManager.js",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/Base.lproj/ANBrowserViewController.xib",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/Base.lproj/ANBrowserViewController_SizeClasses.xib",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/de.lproj/ANBrowserViewController.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/de.lproj/ANBrowserViewController_SizeClasses.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/en.lproj/ANBrowserViewController.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/en.lproj/ANBrowserViewController_SizeClasses.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/errors.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/es.lproj/ANBrowserViewController.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/es.lproj/ANBrowserViewController_SizeClasses.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/fr.lproj/ANBrowserViewController.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/fr.lproj/ANBrowserViewController_SizeClasses.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/an_arrow_left.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/an_arrow_left@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/an_arrow_left@3x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/an_arrow_right.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/an_arrow_right@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/an_arrow_right@3x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/appnexus_logo_icon.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/appnexus_logo_icon@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/compass.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/compass@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/compass@3x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/interstitial_closebox.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/interstitial_closebox@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/interstitial_flat_closebox.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/interstitial_flat_closebox@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/interstitial_flat_closebox@3x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/UIButtonBarArrowLeft.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/UIButtonBarArrowLeft@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/UIButtonBarArrowRight.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/images/UIButtonBarArrowRight@2x.png",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/MobileVastPlayer.js",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/sdkjs.js",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/vastVideo.html",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/zh-Hans.lproj/ANBrowserViewController.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/zh-Hans.lproj/ANBrowserViewController_SizeClasses.strings",
+				"${PODS_ROOT}/AppNexusSDK/sdk/Resources/ANMRAID.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ANInterstitialAdViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/anjam.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mraid.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ASTMediationManager.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ANBrowserViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ANBrowserViewController_SizeClasses.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ANBrowserViewController.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ANBrowserViewController_SizeClasses.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/errors.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an_arrow_left.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an_arrow_left@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an_arrow_left@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an_arrow_right.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an_arrow_right@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/an_arrow_right@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/appnexus_logo_icon.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/appnexus_logo_icon@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/compass.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/compass@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/compass@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/interstitial_closebox.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/interstitial_closebox@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/interstitial_flat_closebox.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/interstitial_flat_closebox@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/interstitial_flat_closebox@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UIButtonBarArrowLeft.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UIButtonBarArrowLeft@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UIButtonBarArrowRight.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UIButtonBarArrowRight@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MobileVastPlayer.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/sdkjs.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/vastVideo.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ANMRAID.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CMPConsentToolDemoApp/Pods-CMPConsentToolDemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1B2F0682075FC4700EB06AE /* Sources */ = {
@@ -372,6 +509,7 @@
 		};
 		D1B2F0832075FC4700EB06AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAB2375D117BFEC7A23E0229 /* Pods-CMPConsentToolDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -390,6 +528,7 @@
 		};
 		D1B2F0842075FC4700EB06AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F0F8183519B8F4BB19250B /* Pods-CMPConsentToolDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

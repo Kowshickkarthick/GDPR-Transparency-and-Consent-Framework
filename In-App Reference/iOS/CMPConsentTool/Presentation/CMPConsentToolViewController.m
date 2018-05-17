@@ -11,6 +11,7 @@
 #import <WebKit/WebKit.h>
 
 NSString *const ConsentStringPrefix = @"consent://";
+NSString *const httpPrefix = @"http://";
 NSString *const ConsentStringQueryParam = @"code64";
 
 @interface CMPConsentToolViewController ()<WKNavigationDelegate>
@@ -97,6 +98,15 @@ NSString *const ConsentStringQueryParam = @"code64";
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveConsentString:)]) {
             [self.delegate consentToolViewController:self didReceiveConsentString:newConsentString];
         }
+    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix]) {
+        
+        if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveURL:)]) {
+            [self.delegate consentToolViewController:self didReceiveURL:request.URL];
+        }else{
+            UIApplication *application = [UIApplication sharedApplication];
+            [application openURL:request.URL options:@{} completionHandler:nil];
+            }
+     
     }
 
     decisionHandler(policy);
@@ -144,5 +154,6 @@ NSString *const ConsentStringQueryParam = @"code64";
     
     return [components URL];
 }
+
 
 @end
