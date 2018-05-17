@@ -127,10 +127,9 @@ public class MainActivity extends AppCompatActivity {
         bav.setAdListener(adListener);
 
 
-        // @NOTE Since we are using a CMP no need to set the below two values in the SDK. The SDK will automatically read the values from Shared Preference stored by CMP.
-        // If you set the values throgh the API's then this will override the CMP values.
-        //ANGDPRSettings.setConsentRequired(this,true);
-        //ANGDPRSettings.setConsentString(this,"CONSENT_STRING");
+        // NOTE even if this is not set AppNexus SDK will automatically read the values from the Shared Preferences.
+        ANGDPRSettings.setConsentRequired(this,CMPStorage.getSubjectToGdpr(this)==SubjectToGdpr.CMPGDPREnabled?true:false);
+        ANGDPRSettings.setConsentString(this,CMPStorage.getConsentString(this));
 
         // Just attaching Banner to an adview will automatically trigger loadAd()
         adContainerLayout.addView(bav);
