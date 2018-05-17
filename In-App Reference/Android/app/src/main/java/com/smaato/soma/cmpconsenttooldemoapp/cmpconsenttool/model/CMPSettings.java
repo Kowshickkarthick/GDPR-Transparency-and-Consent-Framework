@@ -16,7 +16,7 @@ public class CMPSettings implements Serializable {
      * @param isGdprEnabled  Enum that indicates
      *                       'CMPGDPRDisabled' – value 0, not subject to GDPR,
      *                       'CMPGDPREnabled'  – value 1, subject to GDPR,
-     *                       'CMPGDPRUnknown'  - value -1, unset.
+     *                       'CMPGDPRUnknown'  - value Nil, unset.
      * @param consentToolUrl url that is used to create and load the request into the WebView - it is the request for the consent webpage. This property is mandatory
      * @param consentString  If this property is given, it enforces reinitialization with the given string, configured based on the consentToolUrl. This property is optional.
      */
@@ -30,7 +30,7 @@ public class CMPSettings implements Serializable {
      * @return Enum that indicates
      * 'CMPGDPRDisabled' – value 0, not subject to GDPR,
      * 'CMPGDPREnabled'  – value 1, subject to GDPR,
-     * 'CMPGDPRUnknown'  - value -1, unset.
+     * 'CMPGDPRUnknown'  - value Nil, unset.
      */
     public SubjectToGdpr getSubjectToGdpr() {
         return subjectToGdpr;
@@ -41,7 +41,7 @@ public class CMPSettings implements Serializable {
      * @param subjectToGdpr Enum that indicates
      *                      'CMPGDPRDisabled' – value 0, not subject to GDPR,
      *                      'CMPGDPREnabled'  – value 1, subject to GDPR,
-     *                      'CMPGDPRUnknown'  - value -1, unset.
+     *                      'CMPGDPRUnknown'  - value Nil, unset.
      */
     public void setSubjectToGdpr(SubjectToGdpr subjectToGdpr) {
         this.subjectToGdpr = subjectToGdpr;

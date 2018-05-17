@@ -4,10 +4,10 @@ package com.smaato.soma.cmpconsenttooldemoapp.cmpconsenttool.model;
  * Enum that indicates:
  * 'CMPGDPRDisabled' – value 0, not subject to GDPR,
  * 'CMPGDPREnabled'  – value 1, subject to GDPR,
- * 'CMPGDPRUnknown'  - value -1, unset.
+ * 'CMPGDPRUnknown'  - value Nil, unset.
  */
 public enum SubjectToGdpr {
-    CMPGDPRUnknown("-1"), CMPGDPRDisabled("0"), CMPGDPREnabled("1");
+    CMPGDPRUnknown("Nil"), CMPGDPRDisabled("0"), CMPGDPREnabled("1");
     private final String value;
 
     SubjectToGdpr(String value) {

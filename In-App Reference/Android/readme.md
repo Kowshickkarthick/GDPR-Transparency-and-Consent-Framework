@@ -7,7 +7,7 @@
 	* `SubjectToGdpr`: Enum that indicates
 		* `CMPGDPRDisabled` - value 0, not subject to GDPR
 		* `CMPGDPREnabled` - value 1, subject to GDPR
-		* `CMPGDPRUnknown` - value -1, unset
+		* `CMPGDPRUnknown` - value Nil, unset
 	* `consentToolURL`: `String url` that is used to create and load the request into the `WebView` – it is the request for the consent webpage. This property is mandatory.
 	* `consentString`: If this property is given, it enforces reinitialization with the given string, configured based on the `consentToolURL`. This property is optional.
 
@@ -28,7 +28,7 @@ CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, “https
     * subjectToGdpr: Enum that indicates (stored in SharedPreferences under key `IABConsent_SubjectToGDPR`)
         * `CMPGDPRDisabled`- value 0, not subject to GDPR
         * `CMPGDPREnabled` - value 1, subject to GDPR
-        * `CMPGDPRUnknown` - value -1, unset
+        * `CMPGDPRUnknown` - value Nil, unset
     * CMPPresent: Boolean which indicates if a CMP implementing the `iAB` specification is present in the application. (stored in SharedPreferences under key `IABConsent_CMPPresent`)
     * consentString: The consent string as a websafe base64-encoded string. (stored in SharedPreferences under key `IABConsent_ConsentString`)
     * purposes: String of purposes created from a subset of the decoded consentString converted to binary. (stored in SharedPreferences under key `IABConsent_ParsedPurposeConsents`)
