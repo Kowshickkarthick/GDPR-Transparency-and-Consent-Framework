@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         // @NOTE Since we are using a CMP no need to set the below two values in the SDK. The SDK will automatically read the values from Shared Preference stored by CMP.
         // If you set the values throgh the API's then this will override the CMP values.
         //ANGDPRSettings.setConsentRequired(this,true);
-        //ANGDPRSettings.setConsentRequired(this,"CONSENT_STRING");
+        //ANGDPRSettings.setConsentString(this,"CONSENT_STRING");
 
         // Just attaching Banner to an adview will automatically trigger loadAd()
         adContainerLayout.addView(bav);
