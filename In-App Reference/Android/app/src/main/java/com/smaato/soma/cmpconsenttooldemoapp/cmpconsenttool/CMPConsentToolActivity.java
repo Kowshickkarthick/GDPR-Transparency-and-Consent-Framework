@@ -137,14 +137,23 @@ public class CMPConsentToolActivity extends AppCompatActivity {
         }
 
         private void handleWebViewInteraction(String url) {
-            handleReceivedConsentString(url);
 
-            if (onCloseCallback != null) {
-                onCloseCallback.onWebViewClosed();
-                onCloseCallback = null;
+            if(url.contains("consent://")) {
+
+                handleReceivedConsentString(url);
+
+                if (onCloseCallback != null) {
+                    onCloseCallback.onWebViewClosed();
+                    onCloseCallback = null;
+                }
+
+                finish();
+
             }
-
-            finish();
+            else{
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(browserIntent);
+            }
         }
 
         private void handleReceivedConsentString(String url) {

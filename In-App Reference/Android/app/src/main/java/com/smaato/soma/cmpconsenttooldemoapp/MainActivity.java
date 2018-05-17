@@ -1,8 +1,10 @@
 package com.smaato.soma.cmpconsenttooldemoapp;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         Button gdprButton = findViewById(R.id.gdpr_button);
         gdprInfoTextView = findViewById(R.id.gdpr_info_text_view);
 
@@ -29,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CMPStorage.setCmpPresentValue(MainActivity.this, true);
-                CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "https://demofiles.smaato.com/cmp/index.html", null);
+                CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "http://10.0.2.2:5000/docs/complete.html", null);
 
                 CMPConsentToolActivity.openCmpConsentToolView(cmpSettings, MainActivity.this, new OnCloseCallback() {
                     @Override
