@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showCMP(){
         CMPStorage.setCmpPresentValue(MainActivity.this, true);
-        CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "http://mobile.devnxs.net/testgdpr/docs/complete.html", null);
+        CMPSettings cmpSettings = new CMPSettings(SubjectToGdpr.CMPGDPREnabled, "https://acdn.adnxs.com/mobile/democmp/docs/complete.html", null);
 
         CMPConsentToolActivity.openCmpConsentToolView(cmpSettings, MainActivity.this, new OnCloseCallback() {
             @Override
