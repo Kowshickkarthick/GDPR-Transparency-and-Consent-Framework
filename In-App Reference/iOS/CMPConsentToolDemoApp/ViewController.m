@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 //#import "CMPConsentToolAPI.h"
+#import "CMPDataStorageUserDefaults.h"
 #import "CMPConsentToolViewController.h"
 #import <AppNexusSDK/ANBannerAdView.h>
 #import <CoreLocation/CoreLocation.h>
@@ -30,14 +31,17 @@ NSString * const  Consent_SubjectToGDPR = @"IABConsent_SubjectToGDPR";
     
     NSString* consentString = [[NSUserDefaults standardUserDefaults] objectForKey:Consent_ConsentString];
     NSString* subjectToGdprValue = [[NSUserDefaults standardUserDefaults] objectForKey:Consent_SubjectToGDPR];
-    if(consentString != nil && [subjectToGdprValue isEqualToString:@"1"]){
-        self.GDPRConsentStringLabel.text = consentString;
+    CMPDataStorageUserDefaults *consentStorageVC = [[CMPDataStorageUserDefaults alloc] init];
+    
+    
+    if(consentStorageVC.cmpPresent  && consentStorageVC.consentString.length != 0){
+        self.GDPRConsentStringLabel.text = consentStorageVC.consentString;
     }
 }
 
 - (IBAction)showGDPRConsentTool:(id)sender {
     CMPConsentToolViewController *consentToolVC = [[CMPConsentToolViewController alloc] init];
-    consentToolVC.consentToolURL = [NSURL URLWithString: @"https://acdn.adnxs.com/mobile/democmp/docs/complete.html"];
+    consentToolVC.consentToolURL = [NSURL URLWithString: @"http://mobile.devnxs.net/testgdpr/docs/complete.html"];
     consentToolVC.consentToolAPI.subjectToGDPR = SubjectToGDPR_Yes;
     consentToolVC.consentToolAPI.cmpPresent = YES;
     consentToolVC.delegate = self;
@@ -51,11 +55,6 @@ NSString * const  Consent_SubjectToGDPR = @"IABConsent_SubjectToGDPR";
     
     self.GDPRConsentStringLabel.text = consentString;
     
-    if(consentString.length != 0){
-    [[NSUserDefaults standardUserDefaults] setObject:consentString forKey:Consent_ConsentString];
-    [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:Consent_SubjectToGDPR];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    }
     NSLog(@"CMPConsentToolViewControllerDelegate - didReceiveConsentString: %@", consentString);
     NSLog(@"IsSubjectToGDPR from CMPDataStorage: %ld", (long)consentToolViewController.consentToolAPI.subjectToGDPR);
     NSLog(@"ConsentString from CMPDataStorage: %@", consentToolViewController.consentToolAPI.consentString);
