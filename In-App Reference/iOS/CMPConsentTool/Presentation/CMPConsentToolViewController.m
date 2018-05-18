@@ -61,7 +61,7 @@ NSString *const ConsentStringQueryParam = @"code64";
     } else {
         id topGuide = self.topLayoutGuide;
         NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_webView, topGuide);
-
+        
         [self.view addConstraints:[NSLayoutConstraint
                                    constraintsWithVisualFormat:@"V:[topGuide]-[_webView]-0-|"
                                    options:NSLayoutFormatDirectionLeadingToTrailing
@@ -98,17 +98,23 @@ NSString *const ConsentStringQueryParam = @"code64";
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveConsentString:)]) {
             [self.delegate consentToolViewController:self didReceiveConsentString:newConsentString];
         }
-    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix] && ![request.URL.absoluteString.lowercaseString isEqualToString:@"http://mobile.devnxs.net/testgdpr/docs/complete.html"]) {
+    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix] && ![request.URL.absoluteString.lowercaseString isEqualToString:@"http://acdn.adnxs.com/mobile/democmp/docs/complete.html"]) {
         
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveURL:)]) {
             [self.delegate consentToolViewController:self didReceiveURL:request.URL];
         }else{
             UIApplication *application = [UIApplication sharedApplication];
-            [application openURL:request.URL options:@{} completionHandler:nil];
+            if (@available(iOS 10.0, *)) {
+                [application openURL:request.URL options:@{} completionHandler:nil];
+            } else {
+                // Fallback on earlier versions
+                [[UIApplication sharedApplication] openURL:request.URL];
+                
             }
-     
+        }
+        
     }
-
+    
     decisionHandler(policy);
 }
 

@@ -37,7 +37,7 @@ NSString * const  Consent_SubjectToGDPR = @"IABConsent_SubjectToGDPR";
 
 - (IBAction)showGDPRConsentTool:(id)sender {
     CMPConsentToolViewController *consentToolVC = [[CMPConsentToolViewController alloc] init];
-    consentToolVC.consentToolURL = [NSURL URLWithString: @"http://mobile.devnxs.net/testgdpr/docs/complete.html"];
+    consentToolVC.consentToolURL = [NSURL URLWithString: @"http://acdn.adnxs.com/mobile/democmp/docs/complete.html"];
     consentToolVC.consentToolAPI.subjectToGDPR = SubjectToGDPR_Yes;
     consentToolVC.consentToolAPI.cmpPresent = YES;
     consentToolVC.delegate = self;
