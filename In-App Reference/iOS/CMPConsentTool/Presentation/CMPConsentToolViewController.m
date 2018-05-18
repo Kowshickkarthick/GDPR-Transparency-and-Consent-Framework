@@ -98,7 +98,7 @@ NSString *const ConsentStringQueryParam = @"code64";
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveConsentString:)]) {
             [self.delegate consentToolViewController:self didReceiveConsentString:newConsentString];
         }
-    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix]) {
+    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix] && ![request.URL.absoluteString.lowercaseString isEqualToString:@"http://mobile.devnxs.net/testgdpr/docs/complete.html"]) {
         
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveURL:)]) {
             [self.delegate consentToolViewController:self didReceiveURL:request.URL];

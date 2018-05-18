@@ -29,11 +29,7 @@ NSString * const  Consent_SubjectToGDPR = @"IABConsent_SubjectToGDPR";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString* consentString = [[NSUserDefaults standardUserDefaults] objectForKey:Consent_ConsentString];
-    NSString* subjectToGdprValue = [[NSUserDefaults standardUserDefaults] objectForKey:Consent_SubjectToGDPR];
     CMPDataStorageUserDefaults *consentStorageVC = [[CMPDataStorageUserDefaults alloc] init];
-    
-    
     if(consentStorageVC.cmpPresent  && consentStorageVC.consentString.length != 0){
         self.GDPRConsentStringLabel.text = consentStorageVC.consentString;
     }
