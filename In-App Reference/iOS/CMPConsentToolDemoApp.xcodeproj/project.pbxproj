@@ -36,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E0015BB20AF4528004BF5E5 /* CMPConsentGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMPConsentGlobal.h; sourceTree = "<group>"; };
 		2080CD728AD225DD5E179964 /* libPods-CMPConsentToolDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CMPConsentToolDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F0F8183519B8F4BB19250B /* Pods-CMPConsentToolDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMPConsentToolDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMPConsentToolDemoApp/Pods-CMPConsentToolDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		92214CBF20921F96009049DD /* CMPConsentParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPConsentParser.m; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		92214CBE20921F96009049DD /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				0E0015BB20AF4528004BF5E5 /* CMPConsentGlobal.h */,
 				92214CC020921F96009049DD /* CMPConsentConstant.h */,
 				92214CC120921F96009049DD /* CMPConsentParser.h */,
 				92214CBF20921F96009049DD /* CMPConsentParser.m */,

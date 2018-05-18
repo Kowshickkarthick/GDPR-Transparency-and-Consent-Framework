@@ -9,6 +9,7 @@
 #import "CMPConsentToolViewController.h"
 #import "CMPActivityIndicatorView.h"
 #import <WebKit/WebKit.h>
+#import "CMPConsentGlobal.h"
 
 NSString *const ConsentStringPrefix = @"consent://";
 NSString *const httpPrefix = @"http://";
@@ -98,7 +99,8 @@ NSString *const ConsentStringQueryParam = @"code64";
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveConsentString:)]) {
             [self.delegate consentToolViewController:self didReceiveConsentString:newConsentString];
         }
-    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix] && ![request.URL.absoluteString.lowercaseString isEqualToString:@"http://acdn.adnxs.com/mobile/democmp/docs/complete.html"]) {
+        
+    }else  if ([request.URL.absoluteString.lowercaseString hasPrefix:httpPrefix] && ![request.URL.absoluteString.lowercaseString containsString:CMP_URL]){
         
         if ([self.delegate respondsToSelector:@selector(consentToolViewController:didReceiveURL:)]) {
             [self.delegate consentToolViewController:self didReceiveURL:request.URL];

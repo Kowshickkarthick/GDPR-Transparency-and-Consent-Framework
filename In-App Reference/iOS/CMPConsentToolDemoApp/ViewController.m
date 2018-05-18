@@ -13,7 +13,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AppNexusSDK/ANLocation.h>
 #import <AppNexusSDK/ANLogManager.h>
-
+#import "CMPConsentGlobal.h"
 NSString * const  Consent_ConsentString = @"IABConsent_ConsentString";
 NSString * const  Consent_SubjectToGDPR = @"IABConsent_SubjectToGDPR";
 
@@ -37,7 +37,7 @@ NSString * const  Consent_SubjectToGDPR = @"IABConsent_SubjectToGDPR";
 
 - (IBAction)showGDPRConsentTool:(id)sender {
     CMPConsentToolViewController *consentToolVC = [[CMPConsentToolViewController alloc] init];
-    consentToolVC.consentToolURL = [NSURL URLWithString: @"http://acdn.adnxs.com/mobile/democmp/docs/complete.html"];
+    consentToolVC.consentToolURL = [NSURL URLWithString:CMP_URL];
     consentToolVC.consentToolAPI.subjectToGDPR = SubjectToGDPR_Yes;
     consentToolVC.consentToolAPI.cmpPresent = YES;
     consentToolVC.delegate = self;

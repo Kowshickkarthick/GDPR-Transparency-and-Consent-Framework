@@ -10,13 +10,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMPConsentTool/Presentation/CMPConsentToolViewController.m"
-            timestampString = "548356822.267717"
+            timestampString = "548358168.230226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-webView:decidePolicyForNavigationAction:decisionHandler:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CMPConsentToolViewController webView:decidePolicyForNavigationAction:decisionHandler:]"
+                  moduleName = "CMPConsentToolDemoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishek.sharma/Documents/GitRepo/GDPR-Transparency-and-Consent-Framework/In-App%20Reference/iOS/CMPConsentTool/Presentation/CMPConsentToolViewController.m"
+                  timestampString = "548358168.446534"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "649">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CMPConsentToolViewController webView:decidePolicyForNavigationAction:decisionHandler:]"
+                  moduleName = "CMPConsentToolDemoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishek.sharma/Documents/GitRepo/GDPR-Transparency-and-Consent-Framework/In-App%20Reference/iOS/CMPConsentTool/Presentation/CMPConsentToolViewController.m"
+                  timestampString = "548358168.448962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "657">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CMPConsentTool/Presentation/CMPConsentToolViewController.m"
-            timestampString = "548356822.26803"
+            timestampString = "548358169.1223201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-webView:decidePolicyForNavigationAction:decisionHandler:"
             landmarkType = "7">
          </BreakpointContent>
