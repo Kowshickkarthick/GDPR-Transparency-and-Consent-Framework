@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96FADA9BB3CDD550257270AE35C1C7EB"
+               BlueprintIdentifier = "297C05E27AE4B59998909E59662CE9FC"
                BlueprintName = "Pods-CMPConsentToolDemoApp"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-CMPConsentToolDemoApp.a">

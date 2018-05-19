@@ -33,9 +33,15 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vC0-z4-Glr" customClass="ANBannerAdView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vC0-z4-Glr">
                                 <rect key="frame" x="21" y="229" width="338" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrc-yR-G4Y" customClass="ANBannerAdView">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="270"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </view>
+                                </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXi-qq-Eud">
                                 <rect key="frame" x="21" y="37" width="338" height="30"/>
@@ -70,7 +76,8 @@
                     </view>
                     <connections>
                         <outlet property="GDPRConsentStringLabel" destination="cqs-pb-t00" id="1rd-5Q-9be"/>
-                        <outlet property="bannerAdView" destination="vC0-z4-Glr" id="BwQ-jA-TwV"/>
+                        <outlet property="adView" destination="vC0-z4-Glr" id="iwJ-w8-gJs"/>
+                        <outlet property="bannerAdView" destination="vrc-yR-G4Y" id="0Cq-gW-Peu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -6,6 +6,16 @@
 //
 
 #import "AppDelegate.h"
+#import <PrebidMobile/PrebidMobile.h>
+#import <PrebidMobile/PBLogManager.h>
+#import <PrebidMobile/PBBannerAdUnit.h>
+#import <PrebidMobile/PBInterstitialAdUnit.h>
+#import <PrebidMobile/PBTargetingParams.h>
+#import <PrebidMobile/PBLogging.h>
+#import <PrebidMobile/PBException.h>
+#import <PrebidMobile/PBException.h>
+#import <PrebidMobile/PBBannerAdUnit.h>
+#import "MPAdView.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +26,47 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self enablePrebidLogs];
+    [self setupPrebidAndRegisterAdUnits];
+    
     return YES;
 }
+- (void)enablePrebidLogs {
+    [PBLogManager setPBLogLevel:PBLogLevelAll];
+}
 
+- (BOOL)setupPrebidAndRegisterAdUnits {
+    @try {
+        // Prebid Mobile setup!
+        [self setupPrebidLocationManager];
+        
+        PBBannerAdUnit *__nullable adUnit1 = [[PBBannerAdUnit alloc] initWithAdUnitIdentifier:@"BannerScreen" andConfigId:@"625c6125-f19e-4d5b-95c5-55501526b2a4"];
+        [adUnit1 addSize:CGSizeMake(320, 50)];
+        [self setPrebidTargetingParams];
+        [PrebidMobile registerAdUnits:@[adUnit1] withAccountId:@"bfa84af2-bd16-4d35-96ad-31c6bb888df0" withHost:PBServerHostAppNexus andPrimaryAdServer:PBPrimaryAdServerMoPub];
+    } @catch (PBException *ex) {
+        NSLog(@"%@",[ex reason]);
+    } @finally {
+        return YES;
+    }
+}
+
+- (void)setupPrebidLocationManager {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)setPrebidTargetingParams {
+    [[PBTargetingParams sharedInstance] setAge:25];
+    [[PBTargetingParams sharedInstance] setGender:PBTargetingParamsGenderFemale];
+ }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

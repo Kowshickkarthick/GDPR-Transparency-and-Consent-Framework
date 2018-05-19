@@ -7,7 +7,9 @@ target 'CMPConsentToolDemoApp' do
 
   # Pods for CMPConsentToolDemoApp
 
-
+  pod 'PrebidMobile'
   pod 'AppNexusSDK'
+  pod 'mopub-ios-sdk'
+  pod 'Google-Mobile-Ads-SDK'
 
 end
