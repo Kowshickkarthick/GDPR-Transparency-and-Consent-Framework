@@ -21,4 +21,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.appnexus.opensdk:appnexus-sdk:[4,5)'
+    compile 'org.prebid:prebid-mobile-sdk:[0,1)'
+    compile 'com.google.android.gms:play-services-ads:10.2.0'
+    compile('com.mopub:mopub-sdk:4.15.0@aar') {
+        transitive = true
+    }
+
+
 }
